@@ -46,43 +46,80 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 
 4-bit Count Down Counter
 ### Procedure
-/* write all the steps invloved */
-
+/* write all the steps invloved
+1.Create a new project in QuartusII software.
+2.Name the project as uc for upcounter and dc for down counter.
+3.Create a new verilog hdl file in the project file.
+4.Name the module as dc and uc for down counter and up counter.
+5.Within the module declare input and output variables.
+6.Create a loop using if-else with condition parameter as reset value.
+7.End the loop.
+8.End the module.
+*/
 
 
 ### PROGRAM 
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: V.A.Jithendra
+RegisterNumber:212221230043
 */
 
+### Upcounter
+module uc(input CLK,input reset,output[0:3]counter);
+reg[0:3]counter_up;
+always@(posedge CLK or posedge reset)
+begin 
+if(reset)
+counter_up<=4'd0;
+else
+counter_up<=counter_up+4'd1;
+end
+assign counter=counter_up;
+endmodule
 
-
-
-
+## Downcounter
+module dc(input CLK,input reset,output[0:3]counter);
+reg[0:3]counter_down;
+always@(posedge CLK or posedge reset)
+begin 
+if(reset)
+counter_down<=4'd0;
+else
+counter_down<=counter_down-4'd1;
+end
+assign counter=counter_down;
+endmodule
 
 ### RTL LOGIC UP COUNTER AND DOWN COUNTER  
 
+### upcounter:
 
-
-
-
-
-
+![upcounter](https://user-images.githubusercontent.com/94226297/169740180-6d085024-5d3b-4d35-bf66-ec9b06e2a8a3.png)
+### Down counter:
+![dc](https://user-images.githubusercontent.com/94226297/169740229-cf713c80-5019-48ca-8377-05654108c522.png)
 
 
 ### TIMING DIGRAMS FOR COUNTER  
+### Upcounter Timing:
+
+![timing uc](https://user-images.githubusercontent.com/94226297/169740269-979d8760-1f43-4312-92cb-ab95432a1a61.png)
+### Down counter Timing:
 
 
-
-
+![dc timing](https://user-images.githubusercontent.com/94226297/169740320-8b4be609-c3db-4f30-9271-74402ba9affa.png)
 
 ### TRUTH TABLE 
 
+### Upcounter truth table:
+![up truth](https://user-images.githubusercontent.com/94226297/169741498-c0a1244e-9360-47ef-b35c-0327d85cc101.png)
+### Down counter truth table:
+![dc truth](https://user-images.githubusercontent.com/94226297/169741557-9de5022c-8c59-4bcb-a643-a8b1167ba950.png)
 
 
 
 
 
 ### RESULTS 
+The program is successfully executed to create 4bit-upcounter and 4bit-downcounter, the RTL simulisation is generated and wafe form is also generated.
+
