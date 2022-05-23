@@ -66,6 +66,7 @@ RegisterNumber:212221230043
 */
 
 ### Upcounter
+/*
 module uc(input CLK,input reset,output[0:3]counter);
 reg[0:3]counter_up;
 always@(posedge CLK or posedge reset)
@@ -77,8 +78,9 @@ counter_up<=counter_up+4'd1;
 end
 assign counter=counter_up;
 endmodule
-
+*/
 ## Downcounter
+/*
 module dc(input CLK,input reset,output[0:3]counter);
 reg[0:3]counter_down;
 always@(posedge CLK or posedge reset)
@@ -90,7 +92,7 @@ counter_down<=counter_down-4'd1;
 end
 assign counter=counter_down;
 endmodule
-
+*/
 ### RTL LOGIC UP COUNTER AND DOWN COUNTER  
 
 ### Upcounter:
