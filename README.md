@@ -93,7 +93,7 @@ endmodule
 
 ### RTL LOGIC UP COUNTER AND DOWN COUNTER  
 
-### upcounter:
+### Upcounter:
 
 ![upcounter](https://user-images.githubusercontent.com/94226297/169740180-6d085024-5d3b-4d35-bf66-ec9b06e2a8a3.png)
 ### Down counter:
